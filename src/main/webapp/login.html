@@ -1,0 +1,91 @@
+<!doctype html class="no-js h-100" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Login the Admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" id="main-stylesheet" data-version="1.1.0" href="styles/shards-dashboards.1.1.0.min.css">
+    <link rel="stylesheet" href="styles/extras.1.1.0.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@8.16.4/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8.16.4/dist/sweetalert2.all.min.js"></script>
+</head>
+
+<body class="h-100">
+<div class="container-fluid"
+     style="background: url(https://w.wallhaven.cc/full/43/wallhaven-43zpgv.jpg) no-repeat;background-size:cover;height: 100%;">
+    <div class="row">
+        <div class="col-lg-3 offset-lg-8 offset-md-3">
+            <div class="card card-small mb-4 pt-3" style="margin-top: 10rem!important">
+                <div class="card-header border-bottom text-center">
+                    <div class="mb-3 mx-auto">
+                        <h4 class="mb-0">学生考勤系统后台</h4>
+                        <span class="text-muted d-block mb-2">Project Manager</span>
+                    </div>
+                </div>
+                <div class='card-body p-0'>
+                    <form>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item px-3">
+                                <!-- Button Groups -->
+                                <strong class="text-muted d-block mb-2">用户名</strong>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                            <span class="input-group-prepend">
+                                                <span class="input-group-text">
+                                                    <i class="material-icons">person</i>
+                                                </span>
+                                            </span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Username"
+                                           aria-label="Username" aria-describedby="basic-addon1" id="username">
+                                </div>
+                                <strong class="text-muted d-block mb-2">密 码</strong>
+
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                            <span class="input-group-append">
+                                                <span class="input-group-text">
+                                                    <i class="material-icons">lock</i>
+                                                </span>
+                                            </span>
+                                    </div>
+                                    <input type="password" class="form-control" placeholder="Password"
+                                           aria-label="Username" aria-describedby="basic-addon1" id="password">
+                                </div>
+                                <!-- <div class="custom-control custom-checkbox mb-1 mt-1">
+                                <input type="checkbox" class="custom-control-input" id="category1" checked>
+                                <label class="custom-control-label" for="category1">记住密码</label>
+                            </div> -->
+                                <div class="custom-control custom-toggle custom-toggle-sm mb-1  mt-1">
+                                    <input type="checkbox" id="customToggle1" name="customToggle1"
+                                           class="custom-control-input">
+                                    <label class="custom-control-label" for="customToggle1">记住密码</label>
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex px-3 text-center">
+                                <div class="mt-3 mx-auto ">
+                                    <button type="button" class="mb-2 btn btn-sm btn-success mr-1"
+                                            style="width: 150px;height: 40px;" id="login">登陆
+                                    </button>
+                                </div>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script>
+<script src="scripts/main.js"></script>
+</body>
+
+</html>

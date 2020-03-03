@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.kaoqin.mapper.UserMapper">
+
+    <select id="loginCheck" resultType="user">
+        select * from user where username = #{0} and password = #{1}
+    </select>
+
+    <select id="findByUsername" parameterType="string" resultType="user">
+        select * from user where username = #{username}
+    </select>
+
+    <select id="clockCheck" parameterType="string" resultType="int">
+        select isClock from isClock where username = #{username}
+    </select>
+
+    <insert id="askLeave">
+        update isClock set isClock = -1, date = NOW(), reason = #{1} where username = #{0}
+    </insert>
+
+    <insert id="addUserInfo" parameterType="userInfo">
+        insert into user_info values (#{username}, #{className}, #{name}, #{phoneNum}, #{dormId}, null)
+    </insert>
+
+    <insert id="addClock" parameterType="string">
+        insert into isClock values (#{username}, null, 0, null)
+    </insert>
+
+    <insert id="clock" parameterType="string">
+        update isClock set isClock = 1, date = now() where username = #{username}
+    </insert>
+
+    <update id="updatePwd">
+        update user set password = #{1} where username = #{0}
+    </update>
+</mapper>
+

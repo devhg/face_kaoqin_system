@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+<!--    <settings>-->
+<!--        <setting name="logImpl" value="LOG4J"/>-->
+<!--    </settings>-->
+    <!--配置别名-->
+    <typeAliases>
+        <package name="com.kaoqin.model"/>
+    </typeAliases>
+
+    <mappers>
+        <!-- 包配置只适合mapper代理 -->
+        <!-- 要求类名和配置文件一致且放在一个目录下   推荐使用 -->
+        <package name="com.kaoqin.mapper"/>
+        <!-- <mapper resource="cn/coder/mapper/UserMapper.xml"/>-->
+        <!-- <mapper resource="cn/coder/sqlmap/User.xml"/>-->
+    </mappers>
+</configuration>

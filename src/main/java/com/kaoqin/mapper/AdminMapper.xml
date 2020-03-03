@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.kaoqin.mapper.AdminMapper">
+
+    <select id="findAll" resultType="user">
+        select * from user
+    </select>
+
+    <select id="loginCheck" resultType="admin">
+        select * from admin where username = #{0} and password = #{1}
+    </select>
+
+    <update id="updatePassword">
+        update admin set password = #{1} where username = #{0}
+    </update>
+
+    <select id="clockList" resultType="clock">
+        select * from isClock
+    </select>
+
+    <select id="signList" resultType="clock">
+        select * from isClock where isClock = 1
+    </select>
+
+    <select id="unsignList" resultType="clock">
+        select * from isClock where isClock = 0
+    </select>
+
+    <select id="leaveList" resultType="clock">
+        select * from isClock where isClock = -1
+    </select>
+
+    <select id="dateClockList" parameterType="string">
+        select * from stat where DATE_FORMAT(date, '%Y-%c-%e') = #{timeString}
+    </select>
+
+    <insert id="insertUser" parameterType="string">
+        insert into user (username, className)values (#{0}, #{1})
+    </insert>
+    
+    <select id="userList" resultType="userinfo">
+        select * from user_info;
+    </select>
+
+</mapper>
+
