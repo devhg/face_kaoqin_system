@@ -34,9 +34,9 @@
 
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://47.94.18.212:3306/attendance?useUnicode=true&amp;characterEncoding=utf8"/>
+        <property name="url" value="jdbc:mysql://${ip}:${port}/attendance?useUnicode=true&amp;characterEncoding=utf8"/>
         <property name="username" value="root"/>
-        <property name="password" value="Xrafece"/>
+        <property name="password" value="${password}"/>
         <property name="maxActive" value="10"/>
         <property name="maxWait" value="60000" />
         <property name="initialSize" value="3"/>
